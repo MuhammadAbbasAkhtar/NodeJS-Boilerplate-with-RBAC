@@ -1,0 +1,72 @@
+{
+    "swagger": "2.0",
+    "info": {
+      "title": "NodeJS Boilerplate with user registration & login",
+      "description": "",
+      "version": "1.0"
+    },
+    "produces": ["application/json"],
+    "paths": {
+        "/api/auth/register":{
+            "put":{
+                "tags": ["Public - 4"],
+                "description": "User Registration",
+                "parameters": [
+                    { "name":"firstName", "in": "formData", "required": true, "type": "string" },
+                    { "name":"lastName", "in": "formData", "required": true, "type": "string" },
+                    { "name":"email", "in": "formData", "required": true, "type": "string" },
+                    { "name":"password", "in": "formData", "required": true, "type": "string", "minLength":6 },
+                    { "name":"mobile_number", "in": "formData", "required": true, "type": "string", "minLength":6 }
+                ],
+                "responses": {}
+            }
+          },
+          "/api/auth/login":{
+            "post":{
+                "tags": ["Public - 4"],
+                "description": "User Login",
+                "parameters": [
+                    { "name":"email", "in": "formData", "required": true, "type": "string" },
+                    { "name":"password", "in": "formData", "required": true, "type": "string" }
+                ],
+                "responses": {}
+            }
+          },
+          "/api/auth/verify/{token}":{
+            "get":{
+              "tags":["Public - 4"],
+              "description": "Verify User",
+              "parameters": [{ "name": "token","in": "path","required": true } ],
+              "responses":{}
+            }
+          },
+          "/api/auth/resend":{
+            "post":{
+              "tags":["Public - 4"],
+              "description": "Resend Verification Email",
+              "parameters": [{ "name": "email","in": "formData","required": true }],
+              "responses":{}
+            }
+          },
+          "/api/auth/validate-token":{
+            "get":{
+              "tags":["Auth - 2"],
+              "description": "Validate User Token",
+              "parameters": [
+                { "name": "Authorization", "in": "header", "type": "string", "default": "Bearer ", "required": false  }
+              ],
+              "responses":{}
+            }
+          },
+          "/api/auth/refresh":{
+            "post":{
+              "tags":["Auth - 2"],
+              "description": "Refresh User Token",
+              "parameters": [
+                { "name": "Authorization", "in": "header", "type": "string", "default": "Bearer ", "required": false  }
+              ],
+              "responses":{}
+            }
+          }
+    }
+}
