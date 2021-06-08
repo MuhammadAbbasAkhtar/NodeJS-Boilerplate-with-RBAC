@@ -8,7 +8,9 @@ const helper = require('./helpers/common')
 const config = require('./config/keys');
 const bodyParser = require('body-parser')
 const fs = require('fs')
+
 const PORT = parseInt(process.env.PORT)
+
 //#region  === 0 - Empty Log files
     fs.truncate('logs/error.log', 0, function(){})   
     fs.truncate('logs/info.log', 0, function(){}) 
@@ -16,6 +18,7 @@ const PORT = parseInt(process.env.PORT)
 //#region  === 1 - CREATE APP
     const app = express();
     app.use(express.urlencoded({ extended: true }));
+    app.use(express.json())
     process.env['LOCAL_IP']  = helper.getLocalIP()
 //#endregion
 //#region  === 2 - CONFIG CORS

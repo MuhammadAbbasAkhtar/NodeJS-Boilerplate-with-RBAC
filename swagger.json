@@ -67,6 +67,78 @@
               ],
               "responses":{}
             }
+          },
+          "/api/moderator/dashboard":{
+            "get":{
+              "tags":["Moderator - 1"],
+              "description": "Dashboard",
+              "parameters": [
+                { "name": "Authorization", "in": "header", "type": "string", "default": "Bearer ", "required": false  }
+              ],
+              "responses":{}
+            }
+          },
+          "/api/admin/dashboard":{
+            "get":{
+              "tags":["Admin - 1"],
+              "description": "Dashboard",
+              "parameters": [
+                { "name": "Authorization", "in": "header", "type": "string", "default": "Bearer ", "required": false  }
+              ],
+              "responses":{}
+            }
+          },
+          "/api/user/dashboard":{
+            "get":{
+              "tags":["User - 1"],
+              "description": "Dashboard",
+              "parameters": [
+                { "name": "Authorization", "in": "header", "type": "string", "default": "Bearer ", "required": false  }
+              ],
+              "responses":{}
+            }
+          },
+          "/api/project/":{
+            "get":{
+              "tags":["Project -  4"],
+              "description": "get projects",
+              "parameters": [
+                { "name": "Authorization", "in": "header", "type": "string", "default": "Bearer ", "required": false  }
+              ],
+              "responses":{}
+            }
+          },
+          "/api/project/{projectId}":{
+            "get":{
+              "tags":["Project -  4"],
+              "description": "get 1 project",
+              "parameters": [
+                { "name": "Authorization", "in": "header", "type": "string", "default": "Bearer ", "required": false  },
+                { "name": "projectId", "in": "path", "type": "string", "required": false  }
+              ],
+              "responses":{}
+            },
+            "delete":{
+              "tags":["Project -  4"],
+              "description": "delete a project",
+              "parameters": [
+                { "name": "Authorization", "in": "header", "type": "string", "default": "Bearer ", "required": false  },
+                { "name": "projectId", "in": "path", "type": "string", "required": false  }
+              ],
+              "responses":{}
+            }
+          },
+          "/api/project/add":{
+            "put":{
+              "tags":["Project -  4"],
+              "description": "Add a new project",
+              "parameters": [
+                { "name": "Authorization", "in": "header", "type": "string", "default": "Bearer ", "required": false  },
+                { "name": "name", "in": "formData", "type": "string", "required": false  }
+              ],
+              "responses":{}
+            }
           }
+          
     }
 }

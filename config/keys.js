@@ -2,11 +2,11 @@ const APP_NAME = process.env.APP_NAME
 
 module.exports = { 
     MONGO_CONN_OPTIONS: { useNewUrlParser: true, useCreateIndex: true, useUnifiedTopology: true, useFindAndModify: false  },
-    JWT_SECRET:'MJpk3yxeslEbwVY%5$QwjJKWeWDtdX^D1AGN!o+VrYHi0DN1+pBBRW24sTIofm8APHW*eIBgHrB#8nbZQrBAAA(FQ+D6BjxPF00r83XUA4ybSpsRx4T+2wAAAgBeP5VJ48Xl40RDjpIjGx/4rnhJo8MymoB1exz9TLxZSBcvsseM36FIpK2bH7SocqYCKog1/95WYpCDxRyGvh5O92+d7/BrUbrLUcbrzR9PdII8S35PuZOGBMd8e/EALrXQrtWAon2P+3GEhWmk4zRlwVlsOupYF8wZua/rvN2qXTSPHyw',
-    REFRESH_TOKEN_SECRET:'AE2VjZHNhLXNoYTItbmlzdHA1MjEAAAAIbmlzdHA1MjEAAACFBAArudxWYUv1yikWAEsEL82yKKaFEKAIWhqq6Ei11p2tDOjqcjPz7FthXky6Rtof7eSgcwmeERwxfYBBfh3LGHDEUwDHzL0Y5MbswMiMVklb0Drzhr8gQ0+UTHoiYLgJDyNuvo8Bvot5ht7qN4lTy3soDq0zPgC87nCBNc6pT1KnmEE8fg',
-    REFRESH_TOKEN_LIFE:"365d",
+    JWT_SECRET:'1yc2EAAAABJQAAAgEAzHD87c2gFcH6qkHVWIRNnqiQ5Qo7WsS1/Lp4DqJHYDw0nMZWMRV0rOF5karY0AzWxIrakgUmkTAP20OifUT06RU4sTr5zI7/2z73MAAAIBALfIZzg1zwhl4UEyPXxwBO1qN1PRJtYvy1BDUzP5M46Of254oe0tg7/caJxX+Sfyx/udy/jssMbM3SYsEq52ONrOogO4PgtNaSc5hoEzEpyKVred/axFKo4NrA3y5SKDHHbVyj37Cwr2pBCRAUW+q',
+    REFRESH_TOKEN_SECRET:'a/aJRQJ\qV*K9K3!$]}V!*t!9_.&k+Z.Cgr!,MYeAY@:GUL8EwVT6spYpuAh^gL?77PB;@V{Vu?m<{kv**h~?~*Dn.T*kp^UbjsAPkqjB?Ry-KTKf*],!9qce^SSCjmKr8\XzA8arxMLN3}*?hs.h<9=!5#!J@2&mBe/YQ94t:L<W.XP)4x/U)FvHE?n3PBt&kJL?8g~u!%!K?a9pGmtcdYbv@$y&-xRQX2#:6:t%L~!P&t/mxJxnqdK)w8552HH',
+    REFRESH_TOKEN_LIFE:"30d",
     REFRESH_TOKEN_ALGO:"HS256",
-    tokenExpireTime:"6h",
+    tokenExpireTime:"4h",
     welcome_email_subject: `Welcome to ${APP_NAME}`,
     emailUrl:'/api/auth/verify/',
     emailLocalUrl:`/api/auth/verify/`,
